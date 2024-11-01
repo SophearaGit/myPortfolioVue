@@ -3,6 +3,7 @@ import store from '../stores/index.js';
 import LoginView from '../views/LoginView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import MasterPortfolio from '../views/MasterPortfolio.vue';
+import ProfileEditView from '../views/ProfileEditView.vue';
 
 const routes = [
   {
@@ -19,6 +20,12 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardView,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/dashboard/profile-edit',
+    name: 'ProfileEditView',
+    component: ProfileEditView,
     meta: { requiresAuth: true },
   },
 ];

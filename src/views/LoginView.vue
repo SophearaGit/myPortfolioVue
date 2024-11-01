@@ -18,7 +18,8 @@
                   </div>
                   <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <Field type="password" id="password" name="password" class="form-control" placeholder="**************" />
+                    <Field type="password" id="password" name="password" class="form-control"
+                      placeholder="**************" />
                     <ErrorMessage name="password" class="text-danger" />
                   </div>
                   <div class="d-lg-flex justify-content-between align-items-center mb-4">
@@ -96,7 +97,7 @@ export default {
         email: yup.string().email("Invalid email").required("Email is required"),
         password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
       }),
-      errorMessage: null, 
+      errorMessage: null,
     };
   },
   methods: {
@@ -106,27 +107,32 @@ export default {
       axios
         .post("https://cdlapi.chandalen.dev/api/login", values)
         .then((response) => {
-          console.log("Login successful:", response.data);
-          const userData = {
-            id: response.data.data.id,
-            name: response.data.data.name,
-            email: response.data.data.email,
-            avatar: response.data.data.avatar,
-            token: response.data.data.token,
-          };
-          localStorage.setItem('token', response.data.data.token);
-          this.login(userData);
-          this.$router.push({ name: 'Dashboard' });
+          if (response.data && response.data.data && response.data.data.token) {
+            console.log("Login successful:", response.data);
+            const userData = {
+              id: response.data.data.id,
+              name: response.data.data.name,
+              email: response.data.data.email,
+              avatar: response.data.data.avatar,
+              token: response.data.data.token,
+            };
+            localStorage.setItem('token', response.data.data.token);
+            this.login(userData);
+            this.$router.push({ name: 'Dashboard' });
+          } else {
+            this.errorMessage = "Email or password is incorrect, please try again.";
+            console.log(this.errorMessage);
+          }
         })
         .catch((error) => {
           console.error("Login error:", error);
-          this.errorMessage = "Invalid credentials, please try again.";
+          this.errorMessage = "Email or password is incorrect, please try again.";
         });
     },
   },
+
 };
 </script>
 
-<style scoped>
 
-</style>
+<style scoped></style>

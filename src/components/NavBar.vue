@@ -1,18 +1,10 @@
 <template>
     <div>
         <nav class="navbar-default navbar navbar-expand-lg">
-            <a id="nav-toggle" href="#">
+            <!-- <a id="nav-toggle" href="#">
                 <i class="fe fe-menu"></i>
-            </a>
-            <div class="ms-lg-3 d-none d-md-none d-lg-block">
-                <!-- Form -->
-                <form class="d-flex align-items-center">
-                    <span class="position-absolute ps-3 search-icon">
-                        <i class="fe fe-search"></i>
-                    </span>
-                    <input type="search" class="form-control ps-6" placeholder="Search Entire Dashboard" />
-                </form>
-            </div>
+            </a> -->
+
             <!--Navbar nav -->
             <div class="ms-auto d-flex">
                 <div class="dropdown">
@@ -248,10 +240,10 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/profile-edit.html">
+                                    <router-link class="dropdown-item" to="/dashboard/profile-edit">
                                         <i class="fe fe-user me-2"></i>
                                         Profile
-                                    </a>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="../../pages/student-subscriptions.html">
@@ -312,7 +304,6 @@ export default {
                         },
                     });
                     this.user = response.data.data;
-                    console.log(this.user);
                 } catch (error) {
                     console.error("There was an error fetching the user data:", error);
                 }
