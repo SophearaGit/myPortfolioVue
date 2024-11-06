@@ -60,7 +60,7 @@
                                             </router-link>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">
+                                            <a class="nav-link" @click.prevent="SignOut">
                                                 <i class="fe fe-power nav-icon"></i>
                                                 Sign Out
                                             </a>
@@ -177,7 +177,7 @@ export default {
         async getUser() {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('https://cdlapi.chandalen.dev/api/me', {
+                const response = await axios.get('/me', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -200,7 +200,7 @@ export default {
             if (!this.v$.$error) {
                 try {
                     const token = localStorage.getItem('token');
-                    await axios.put('https://cdlapi.chandalen.dev/api/own/personal-information', {
+                    await axios.put('/own/personal-information', {
                         name: this.form.name,
                         email: this.form.email,
                     }, {
@@ -208,10 +208,12 @@ export default {
                             Authorization: `Bearer ${token}`,
                         },
                     });
-                    await this.getUser();
+                    // await this.getUser();
+                    window.location.reload();
                     if (this.selectedFile) {
                         await this.updateAvatar();
                     }
+                    
                 } catch (error) {
                     console.error('Error updating profile:', error);
                     alert('Failed to update profile. Please try again.');
@@ -237,7 +239,7 @@ export default {
                 const formData = new FormData();
                 formData.append('avatar', this.selectedFile);
 
-                await axios.post('https://cdlapi.chandalen.dev/api/own/avatars', formData, {
+                await axios.post('/own/avatars', formData, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                         'Content-Type': 'multipart/form-data',
@@ -254,7 +256,7 @@ export default {
             if (confirmation) {
                 try {
                     const token = localStorage.getItem('token');
-                    await axios.delete('https://cdlapi.chandalen.dev/api/own/avatars', {
+                    await axios.delete('/own/avatars', {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -265,6 +267,25 @@ export default {
                     console.error('Error deleting avatar:', error);
                     alert('Failed to delete avatar. Please try again.');
                 }
+            }
+        },
+        async SignOut() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                try {
+                    const response = await axios.delete('/logout', {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    });
+                    localStorage.removeItem('token');
+                    window.location.reload();
+                    this.user = { name: '', email: '', avatar: '/assets/images/default.png' };
+                } catch (error) {
+                    console.error("There was an error logging out:", error);
+                }
+            } else {
+                console.warn("No token found, cannot log out.");
             }
         },
     },

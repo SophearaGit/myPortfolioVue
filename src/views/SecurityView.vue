@@ -177,7 +177,7 @@ export default {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.get('https://cdlapi.chandalen.dev/api/me', {
+                    const response = await axios.get('/me', {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -192,7 +192,7 @@ export default {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    await axios.delete('https://cdlapi.chandalen.dev/api/logout', {
+                    await axios.delete('/logout', {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -210,7 +210,7 @@ export default {
             if (!this.v$.$error && !this.passwordMismatch) {
                 const token = localStorage.getItem('token');
                 try {
-                    const response = await axios.put('https://cdlapi.chandalen.dev/api/own/password', {
+                    const response = await axios.put('/own/password', {
                         current_password: this.form.current_password,
                         password: this.form.password,
                         password_confirmation: this.form.password_confirmation

@@ -217,49 +217,17 @@
                             </div>
                             <div class="dropdown-divider"></div>
                             <ul class="list-unstyled">
-                                <li class="dropdown-submenu dropstart-lg">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
-                                        <i class="fe fe-circle me-2"></i>
-                                        Status
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <span class="badge-dot bg-success me-2"></span>
-                                                Online
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <span class="badge-dot bg-secondary me-2"></span>
-                                                Offline
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <span class="badge-dot bg-warning me-2"></span>
-                                                Away
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <span class="badge-dot bg-danger me-2"></span>
-                                                Busy
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <router-link class="dropdown-item" to="/dashboard">
+                                        <i class="fe fe-home me-2"></i>
+                                        Dashboard
+                                    </router-link>
                                 </li>
                                 <li>
                                     <router-link class="dropdown-item" to="/dashboard/profile-edit">
                                         <i class="fe fe-user me-2"></i>
                                         Profile
                                     </router-link>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="../../pages/student-subscriptions.html">
-                                        <i class="fe fe-star me-2"></i>
-                                        Subscription
-                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
@@ -295,7 +263,7 @@ export default {
             user: {
                 name: '',
                 email: '',
-                avatar: '/assets/images/default.png', 
+                avatar: '/assets/images/default.png',
             },
         };
     },
@@ -317,7 +285,7 @@ export default {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.get('https://cdlapi.chandalen.dev/api/me', {
+                    const response = await axios.get('/me', {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -339,15 +307,14 @@ export default {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.delete('https://cdlapi.chandalen.dev/api/logout', {
+                    const response = await axios.delete('/logout', {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
                     });
-                    console.log("Logged out successfully:", response.data);
                     localStorage.removeItem('token');
+                    window.location.reload();
                     this.user = { name: '', email: '', avatar: '/assets/images/default.png' };
-                    this.$router.push('/login');
                 } catch (error) {
                     console.error("There was an error logging out:", error);
                 }

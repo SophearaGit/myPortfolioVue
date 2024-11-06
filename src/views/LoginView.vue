@@ -12,7 +12,7 @@
                 </div>
                 <Form @submit="submitForm" :validation-schema="schema">
                   <div class="mb-3">
-                    <label for="email" class="form-label">Username or email</label>
+                    <label for="email" class="form-label">Email</label>
                     <Field type="email" id="email" name="email" class="form-control" placeholder="Email address here" />
                     <ErrorMessage name="email" class="text-danger" />
                   </div>
@@ -22,11 +22,11 @@
                       placeholder="**************" />
                     <ErrorMessage name="password" class="text-danger" />
                   </div>
-                  <div class="d-lg-flex justify-content-between align-items-center mb-4">
+                  <!-- <div class="d-lg-flex justify-content-between align-items-center mb-4">
                     <div>
                       <a href="forget-password.html">Forgot your password?</a>
                     </div>
-                  </div>
+                  </div> -->
                   <div>
                     <div class="d-grid">
                       <button type="submit" class="btn btn-primary">Sign in</button>
@@ -102,37 +102,37 @@ export default {
   },
   methods: {
     ...mapMutations(['login']),
-    submitForm(values) {
+    async submitForm(values) {
       this.errorMessage = null;
-      axios
-        .post("https://cdlapi.chandalen.dev/api/login", values)
-        .then((response) => {
-          if (response.data && response.data.data && response.data.data.token) {
-            console.log("Login successful:", response.data);
-            const userData = {
-              id: response.data.data.id,
-              name: response.data.data.name,
-              email: response.data.data.email,
-              avatar: response.data.data.avatar,
-              token: response.data.data.token,
-            };
-            localStorage.setItem('token', response.data.data.token);
-            this.login(userData);
-            this.$router.push({ name: 'Dashboard' });
-          } else {
-            this.errorMessage = "Email or password is incorrect, please try again.";
-            console.log(this.errorMessage);
-          }
-        })
-        .catch((error) => {
-          console.error("Login error:", error);
+
+      try {
+        const response = await axios.post("/login", values);
+
+        if (response.data && response.data.data && response.data.data.token) {
+          console.log("Login successful:", response.data);
+
+          const userData = {
+            id: response.data.data.id,
+            name: response.data.data.name,
+            email: response.data.data.email,
+            avatar: response.data.data.avatar,
+            token: response.data.data.token,
+          };
+
+          localStorage.setItem('token', response.data.data.token);
+          this.login(userData);
+          this.$router.push({ name: 'Dashboard' });
+        } else {
           this.errorMessage = "Email or password is incorrect, please try again.";
-        });
+          console.log(this.errorMessage);
+        }
+      } catch (error) {
+        console.error("Login error:", error);
+        this.errorMessage = "Email or password is incorrect, please try again.";
+      }
     },
   },
-
 };
 </script>
-
 
 <style scoped></style>
