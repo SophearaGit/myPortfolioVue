@@ -2,999 +2,708 @@
     <div id="db-wrapper">
         <!-- navbar vertical -->
         <!-- Sidebar -->
-        <Sidebar/>
+        <Sidebar />
         <!-- Page Content -->
         <main id="page-content">
-            <div class="header">
-                <!-- navbar -->
-                <NavBar/>
-            </div>
+            <!-- navbar -->
+            <NavBar />
             <!-- Container fluid -->
             <section class="container-fluid p-4">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-12">
-                        <!-- Page Header -->
-                        <div class="border-bottom pb-3 mb-3 d-md-flex align-items-center justify-content-between">
-                            <div class="mb-3 mb-md-0">
-                                <h1 class="mb-1 h2 fw-bold">Courses</h1>
-                                <!-- Breadcrumb -->
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item">
-                                            <a href="../dashboard/admin-dashboard.html">Dashboard</a>
-                                        </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="#">Courses</a>
-                                        </li>
-                                        <li class="breadcrumb-item active" aria-current="page">All</li>
-                                    </ol>
-                                </nav>
+                        <div class="border-bottom pb-3 mb-3 d-lg-flex justify-content-between align-items-center">
+                            <div class="mb-3 mb-lg-0">
+                                <h1 class="mb-0 h2 fw-bold">Dashboard</h1>
                             </div>
-                            <div>
-                                <a href="../add-course.html" class="btn btn-primary">Add New Courses</a>
+                            <div class="d-flex">
+                                <div class="input-group me-3">
+                                    <input class="form-control flatpickr" type="text" placeholder="Select Date"
+                                        aria-describedby="basic-addon2">
+
+                                    <span class="input-group-text" id="basic-addon2"><i
+                                            class="fe fe-calendar"></i></span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Setting</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12">
                         <!-- Card -->
-                        <div class="card rounded-3">
+                        <div class="card mb-4">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3 lh-1">
+                                    <div>
+                                        <span class="fs-6 text-uppercase fw-semibold ls-md">Sales</span>
+                                    </div>
+                                    <div>
+                                        <span class="fe fe-shopping-bag fs-3 text-primary"></span>
+                                    </div>
+                                </div>
+                                <h2 class="fw-bold mb-1">$10,800</h2>
+                                <span class="text-success fw-semibold">
+                                    <i class="fe fe-trending-up me-1"></i>
+                                    +20.9$
+                                </span>
+                                <span class="ms-1 fw-medium">Number of sales</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+                        <!-- Card -->
+                        <div class="card mb-4">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3 lh-1">
+                                    <div>
+                                        <span class="fs-6 text-uppercase fw-semibold ls-md">Courses</span>
+                                    </div>
+                                    <div>
+                                        <span class="fe fe-book-open fs-3 text-primary"></span>
+                                    </div>
+                                </div>
+                                <h2 class="fw-bold mb-1">2,456</h2>
+                                <span class="text-danger fw-semibold">120+</span>
+                                <span class="ms-1 fw-medium">Number of pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+                        <!-- Card -->
+                        <div class="card mb-4">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3 lh-1">
+                                    <div>
+                                        <span class="fs-6 text-uppercase fw-semibold ls-md">Students</span>
+                                    </div>
+                                    <div>
+                                        <span class="fe fe-users fs-3 text-primary"></span>
+                                    </div>
+                                </div>
+                                <h2 class="fw-bold mb-1">1,22,456</h2>
+                                <span class="text-success fw-semibold">
+                                    <i class="fe fe-trending-up me-1"></i>
+                                    +1200
+                                </span>
+                                <span class="ms-1 fw-medium">Students</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+                        <!-- Card -->
+                        <div class="card mb-4">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3 lh-1">
+                                    <div>
+                                        <span class="fs-6 text-uppercase fw-semibold ls-md">Instructor</span>
+                                    </div>
+                                    <div>
+                                        <span class="fe fe-user-check fs-3 text-primary"></span>
+                                    </div>
+                                </div>
+                                <h2 class="fw-bold mb-1">22,786</h2>
+                                <span class="text-success fw-semibold">
+                                    <i class="fe fe-trending-up me-1"></i>
+                                    +200
+                                </span>
+                                <span class="ms-1 fw-medium">Instructor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-12">
+                        <!-- Card -->
+                        <div class="card mb-4">
                             <!-- Card header -->
-                            <div class="card-header p-0">
+                            <div
+                                class="card-header align-items-center card-header-height d-flex justify-content-between align-items-center">
                                 <div>
-                                    <!-- Nav -->
-                                    <ul class="nav nav-lb-tab border-bottom-0" id="tab" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="courses-tab" data-bs-toggle="pill"
-                                                href="#courses" role="tab" aria-controls="courses"
-                                                aria-selected="true">All</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="approved-tab" data-bs-toggle="pill" href="#approved"
-                                                role="tab" aria-controls="approved" aria-selected="false">Approved</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pending-tab" data-bs-toggle="pill" href="#pending"
-                                                role="tab" aria-controls="pending" aria-selected="false">Pending</a>
-                                        </li>
-                                    </ul>
+                                    <h4 class="mb-0">Earnings</h4>
                                 </div>
-                            </div>
-                            <div class="p-4 row">
-                                <!-- Form -->
-                                <form class="d-flex align-items-center col-12 col-md-12 col-lg-12">
-                                    <span class="position-absolute ps-3 search-icon"><i class="fe fe-search"></i></span>
-                                    <input type="search" class="form-control ps-6" placeholder="Search Course">
-                                </form>
-                            </div>
-                            <div>
-                                <!-- Table -->
-                                <div class="tab-content" id="tabContent">
-                                    <!--Tab pane -->
-                                    <div class="tab-pane fade show active" id="courses" role="tabpanel"
-                                        aria-labelledby="courses-tab">
-                                        <div class="table-responsive border-0 overflow-y-hidden">
-                                            <table class="table mb-0 text-nowrap table-centered table-hover">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th>Courses</th>
-                                                        <th>Instructor</th>
-                                                        <th>STATUS</th>
-                                                        <th>ACTION</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-gatsby.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">
-                                                                            Revolutionize how you build the web...</h4>
-                                                                        <span>Added on 7 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-7.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Reva Yokk</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown1"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown1">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-graphql.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Guide to
-                                                                            Static Sites with Gatsby...</h4>
-                                                                        <span>Added on 6 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-6.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Brooklyn Simmons</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown2"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown2">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-html.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">The Modern
-                                                                            JavaScript Courses ...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-5.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Miston Wilson</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown3"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown3">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-javascript.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Courses
-                                                                            JavaScript Heading Title ...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-10.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Guy Hawkins</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown4"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown4">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-node.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with Node Heading Title ...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-3.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Sina Ray</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown5"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown5">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-laravel.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with Laravel...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-9.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Sobo Rikhan</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown6"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown6">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-react.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with React...</h4>
-                                                                        <span>Added on 4 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-2.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">April Noms</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown7"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown7">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-angular.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with Angular...</h4>
-                                                                        <span>Added on 3 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-4.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Jacob Jones</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown8"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown8">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!--Tab pane -->
-                                    <div class="tab-pane fade" id="approved" role="tabpanel"
-                                        aria-labelledby="approved-tab">
-                                        <div class="table-responsive border-0 overflow-y-hidden">
-                                            <table class="table mb-0 text-nowrap table-centered table-hover">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th>Courses</th>
-                                                        <th>Instructor</th>
-                                                        <th>STATUS</th>
-                                                        <th>ACTION</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-javascript.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Courses
-                                                                            JavaScript Heading Title ...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-10.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Guy Hawkins</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown9"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown9">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-node.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with Node Heading Title ...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-1.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Liston Zebon</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown10"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown10">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-laravel.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with Laravel...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-4.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Jacob Jones</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown11"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown11">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-react.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with React...</h4>
-                                                                        <span>Added on 4 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-6.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Reema Messlemn</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-success me-1 d-inline-block align-middle"></span>
-                                                            Live
-                                                        </td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-secondary btn-sm">Change
-                                                                Status</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown12"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown12">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!--Tab pane -->
-                                    <div class="tab-pane fade" id="pending" role="tabpanel"
-                                        aria-labelledby="pending-tab">
-                                        <div class="table-responsive border-0 overflow-y-hidden">
-                                            <table class="table mb-0 text-nowrap table-centered table-hover">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th>Courses</th>
-                                                        <th>Instructor</th>
-                                                        <th>STATUS</th>
-                                                        <th>ACTION</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-gatsby.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">
-                                                                            Revolutionize how you build the web...</h4>
-                                                                        <span>Added on 7 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-7.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Reva Yokk</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown13"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown13">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-graphql.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Guide to
-                                                                            Static Sites with Gatsby...</h4>
-                                                                        <span>Added on 6 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-6.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Brooklyn Simmons</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown14"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown14">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-html.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">The Modern
-                                                                            JavaScript Courses ...</h4>
-                                                                        <span>Added on 5 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-3.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Jenny Wilson</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown15"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown15">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#" class="text-inherit">
-                                                                <div class="d-flex align-items-center">
-                                                                    <div>
-                                                                        <img src="../../assets/images/course/course-angular.jpg"
-                                                                            alt="" class="img-4by3-lg rounded">
-                                                                    </div>
-                                                                    <div class="ms-3">
-                                                                        <h4 class="mb-1 text-primary-hover">Get Start
-                                                                            with Angular...</h4>
-                                                                        <span>Added on 3 July, 2023</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="../../assets/images/avatar/avatar-4.jpg"
-                                                                    alt="" class="rounded-circle avatar-xs me-2">
-                                                                <h5 class="mb-0">Jacob Jones</h5>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span
-                                                                class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>
-                                                            Pending
-                                                        </td>
-                                                        <td>
-                                                            <a href="#"
-                                                                class="btn btn-outline-secondary btn-sm">Reject</a>
-                                                            <a href="#" class="btn btn-success btn-sm">Approved</a>
-                                                        </td>
-                                                        <td>
-                                                            <span class="dropdown dropstart">
-                                                                <a class="btn-icon btn btn-ghost btn-sm rounded-circle"
-                                                                    href="#" role="button" id="courseDropdown16"
-                                                                    data-bs-toggle="dropdown" data-bs-offset="-20,20"
-                                                                    aria-expanded="false">
-                                                                    <i class="fe fe-more-vertical"></i>
-                                                                </a>
-                                                                <span class="dropdown-menu"
-                                                                    aria-labelledby="courseDropdown16">
-                                                                    <span class="dropdown-header">Settings</span>
-                                                                    <a class="dropdown-item" href="#">
-                                                                        <i
-                                                                            class="fe fe-x-circle dropdown-item-icon"></i>
-                                                                        Reject with Feedback
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                <div>
+                                    <div class="dropdown dropstart">
+                                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
+                                            id="courseDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fe fe-more-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="courseDropdown1">
+                                            <span class="dropdown-header">Settings</span>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fe fe-external-link dropdown-item-icon"></i>
+                                                Export
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fe fe-mail dropdown-item-icon"></i>
+                                                Email Report
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fe fe-download dropdown-item-icon"></i>
+                                                Download
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Card Footer -->
-                            <div class="card-footer">
-                                <nav>
-                                    <ul class="pagination justify-content-center mb-0">
-                                        <li class="page-item disabled">
-                                            <a class="page-link mx-1 rounded" href="#">
-                                                👈
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <!-- Earning chart -->
+                                <div id="earning" class="apex-charts"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-12">
+                        <!-- Card -->
+                        <div class="card mb-4">
+                            <!-- Card header -->
+                            <div
+                                class="card-header align-items-center card-header-height d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h4 class="mb-0">Traffic</h4>
+                                </div>
+                                <div>
+                                    <div class="dropdown dropstart">
+                                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
+                                            id="courseDropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fe fe-more-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="courseDropdown2">
+                                            <span class="dropdown-header">Settings</span>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fe fe-external-link dropdown-item-icon"></i>
+                                                Export
                                             </a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link mx-1 rounded" href="#">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link mx-1 rounded" href="#">2</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link mx-1 rounded" href="#">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link mx-1 rounded" href="#">
-                                                👉
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fe fe-mail dropdown-item-icon"></i>
+                                                Email Report
                                             </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fe fe-download dropdown-item-icon"></i>
+                                                Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div id="traffic" class="apex-charts d-flex justify-content-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-4">
+                        <!-- Card -->
+                        <div class="card h-100">
+                            <!-- Card header -->
+                            <div
+                                class="card-header d-flex align-items-center justify-content-between card-header-height">
+                                <h4 class="mb-0">Popular Instructor</h4>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">View all</a>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <!-- List group -->
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0 pt-0">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-offline">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n3">
+                                                <h4 class="mb-0 h5">Rob Percival</h4>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">42</span>
+                                                    Courses
+                                                </span>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">1,10,124</span>
+                                                    Students
+                                                </span>
+                                                <span class="fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">32,000</span>
+                                                    Reviews
+                                                </span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown7" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown7">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-online">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n3">
+                                                <h4 class="mb-0 h5">Jose Portilla</h4>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">12</span>
+                                                    Courses
+                                                </span>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">21,567</span>
+                                                    Students
+                                                </span>
+                                                <span class="fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">22,000</span>
+                                                    Reviews
+                                                </span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown8" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown8">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-away">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n3">
+                                                <h4 class="mb-0 h5">Eleanor Pena</h4>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">32</span>
+                                                    Courses
+                                                </span>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">11,604</span>
+                                                    Students
+                                                </span>
+                                                <span class="fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">12,230</span>
+                                                    Reviews
+                                                </span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown9" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown9">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-info">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-6.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n3">
+                                                <h4 class="mb-0 h5">March Delson</h4>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">23</span>
+                                                    Courses
+                                                </span>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">6,304</span>
+                                                    Students
+                                                </span>
+                                                <span class="fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">56,000</span>
+                                                    Reviews
+                                                </span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown10" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown10">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-busy">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-7.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n3">
+                                                <h4 class="mb-0 h5">Sina Ray</h4>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">14</span>
+                                                    Courses
+                                                </span>
+                                                <span class="me-2 fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">8,000</span>
+                                                    Students
+                                                </span>
+                                                <span class="fs-6">
+                                                    <span class="text-dark me-1 fw-semibold">33,000</span>
+                                                    Reviews
+                                                </span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown11" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown11">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-4">
+                        <!-- Card -->
+                        <div class="card h-100">
+                            <!-- Card header -->
+                            <div
+                                class="card-header d-flex align-items-center justify-content-between card-header-height">
+                                <h4 class="mb-0">Recent Courses</h4>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">View all</a>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <!-- List group flush -->
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0 pt-0">
+                                        <div class="row">
+                                            <!-- Col -->
+                                            <div class="col-md-3 col-12 mb-3 mb-md-0">
+                                                <a href="#">
+                                                    <img src="../../assets/images/course/course-laravel.jpg" alt=""
+                                                        class="img-fluid rounded">
+                                                </a>
+                                            </div>
+                                            <!-- Col -->
+                                            <div class="col-md-8 col-10">
+                                                <a href="#">
+                                                    <h5 class="text-primary-hover">Revolutionize how you build the
+                                                        web...</h5>
+                                                </a>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="../../assets/images/avatar/avatar-7.jpg" alt=""
+                                                        class="rounded-circle avatar-xs me-2">
+                                                    <span class="fs-6">Brooklyn Simmons</span>
+                                                </div>
+                                            </div>
+                                            <!-- Col auto -->
+                                            <div class="col-1 col-auto d-flex justify-content-center">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown3" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown3">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-md-3 col-12 mb-3 mb-md-0">
+                                                <a href="#"><img src="../../assets/images/course/course-gatsby.jpg"
+                                                        alt="" class="img-fluid rounded"></a>
+                                            </div>
+                                            <div class="col-md-8 col-10">
+                                                <a href="#">
+                                                    <h5 class="text-primary-hover">Guide to Static Sites with Gatsby.js
+                                                    </h5>
+                                                </a>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="../../assets/images/avatar/avatar-8.jpg" alt=""
+                                                        class="rounded-circle avatar-xs me-2">
+                                                    <span class="fs-6">Jenny Wilson</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-1 col-auto d-flex justify-content-center">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown4" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown4">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-md-3 col-12 mb-3 mb-md-0">
+                                                <a href="#">
+                                                    <img src="../../assets/images/course/course-javascript.jpg" alt=""
+                                                        class="img-fluid rounded">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8 col-10">
+                                                <a href="#">
+                                                    <h5 class="text-primary-hover">The Modern JavaScript Courses</h5>
+                                                </a>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="../../assets/images/avatar/avatar-1.jpg" alt=""
+                                                        class="rounded-circle avatar-xs me-2">
+                                                    <span class="fs-6">Guy Hawkins</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-1 col-auto d-flex justify-content-center">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown5" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown5">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                            <div class="col-md-3 col-12 mb-3 mb-md-0">
+                                                <a href="#">
+                                                    <img src="../../assets/images/course/course-wordpress.jpg" alt=""
+                                                        class="img-fluid rounded">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8 col-10">
+                                                <a href="#">
+                                                    <h5 class="text-primary-hover">Online WordPress Courses Become an
+                                                        Expert Today‎</h5>
+                                                </a>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="../../assets/images/avatar/avatar-5.jpg" alt=""
+                                                        class="rounded-circle avatar-xs me-2">
+                                                    <span class="fs-6">Robert Fox</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-1 col-auto d-flex justify-content-center">
+                                                <span class="dropdown dropstart">
+                                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#"
+                                                        role="button" id="courseDropdown6" data-bs-toggle="dropdown"
+                                                        data-bs-offset="-20,20" aria-expanded="false">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <span class="dropdown-menu" aria-labelledby="courseDropdown6">
+                                                        <span class="dropdown-header">Settings</span>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                            Remove
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-4">
+                        <!-- Card -->
+                        <div class="card h-100">
+                            <!-- Card header -->
+                            <div class="card-header card-header-height d-flex align-items-center">
+                                <h4 class="mb-0">Activity</h4>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <!-- List group -->
+                                <ul class="list-group list-group-flush list-timeline-activity">
+                                    <li class="list-group-item px-0 pt-0 border-0 mb-2">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-online">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-6.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n2">
+                                                <h4 class="mb-0 h5">Dianna Smiley</h4>
+                                                <p class="mb-1">Just buy the courses”Build React Application Tutorial”
+                                                </p>
+                                                <span class="fs-6">2m ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0 pt-0 border-0 mb-2">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-offline">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-7.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n2">
+                                                <h4 class="mb-0 h5">Irene Hargrove</h4>
+                                                <p class="mb-1">Comment on “Bootstrap Tutorial” Says “Hi,I m irene...
+                                                </p>
+                                                <span class="fs-6">1 hour ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- List group -->
+                                    <li class="list-group-item px-0 pt-0 border-0 mb-2">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-busy">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n2">
+                                                <h4 class="mb-0 h5">Trevor Bradle</h4>
+                                                <p class="mb-1">Just share your article on Social Media..</p>
+                                                <span class="fs-6">2 month ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0 pt-0 border-0">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-md avatar-indicators avatar-away">
+                                                    <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col ms-n2">
+                                                <h4 class="mb-0 h5">John Deo</h4>
+                                                <p class="mb-1">Just buy the courses”Build React Application Tutorial”
+                                                </p>
+                                                <span class="fs-6">2m ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1005,8 +714,6 @@
 </template>
 
 <script>
-import axios from 'axios';
-import { mapState } from 'vuex';
 import NavBar from '@/components/NavBar.vue';
 import Sidebar from '@/components/Sidebar.vue';
 

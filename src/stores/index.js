@@ -2,19 +2,19 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-    isAuthenticated: !!localStorage.getItem('token'), // Check if token exists
-    user: null, // Initialize user data
+    isAuthenticated: !!localStorage.getItem('token'),
+    user: null,
   },
   mutations: {
     login(state, userData) {
-      state.isAuthenticated = true; // Set authenticated state
-      state.user = userData; // Store user data
-      localStorage.setItem('token', userData.token); // Store token
+      state.isAuthenticated = true;
+      state.user = userData;
+      localStorage.setItem('token', userData.token);
     },
     logout(state) {
-      state.isAuthenticated = false; // Reset authenticated state
-      state.user = null; // Clear user data
-      localStorage.removeItem('token'); // Remove token on logout
+      state.isAuthenticated = false;
+      state.user = null;
+      localStorage.removeItem('token');
     },
   },
   actions: {
@@ -29,6 +29,7 @@ const store = createStore({
     isAuthenticated: (state) => state.isAuthenticated,
     user: (state) => state.user,
   },
+
 });
 
 export default store;

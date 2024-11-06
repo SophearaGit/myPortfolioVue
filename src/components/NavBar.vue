@@ -1,10 +1,19 @@
 <template>
-    <div>
+    <div class="header">
         <nav class="navbar-default navbar navbar-expand-lg">
-            <!-- <a id="nav-toggle" href="#">
+            <a id="nav-toggle" href="#">
                 <i class="fe fe-menu"></i>
-            </a> -->
-
+            </a>
+            <div class="ms-lg-3 d-none d-md-none d-lg-block">
+                <!-- Form -->
+                <form v-if="$route.path === '/dashboard' || $route.path === '/another-route'"
+                    class="d-flex align-items-center">
+                    <span class="position-absolute ps-3 search-icon">
+                        <i class="fe fe-search"></i>
+                    </span>
+                    <input type="search" class="form-control ps-6" placeholder="Search Entire Dashboard" />
+                </form>
+            </div>
             <!--Navbar nav -->
             <div class="ms-auto d-flex">
                 <div class="dropdown">
@@ -180,7 +189,8 @@
                                 </ul>
                                 <div class="border-top px-3 pt-3 pb-0">
                                     <a href="../../pages/notification-history.html" class="text-link fw-semibold">See
-                                        all Notifications</a>
+                                        all
+                                        Notifications</a>
                                 </div>
                             </div>
                         </div>
@@ -190,18 +200,18 @@
                         <a class="rounded-circle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <div class="avatar avatar-md avatar-indicators avatar-online">
-                                <img alt="avatar" :src="user?.avatar" class="rounded-circle" />
+                                <img :src="computedAvatar" alt="avatar" class="rounded-circle" />
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
                             <div class="dropdown-item">
                                 <div class="d-flex">
                                     <div class="avatar avatar-md avatar-indicators avatar-online">
-                                        <img alt="avatar" :src="user?.avatar" class="rounded-circle" />
+                                        <img :src="computedAvatar" alt="avatar" class="rounded-circle" />
                                     </div>
                                     <div class="ms-3 lh-1">
-                                        <h5 class="mb-1">{{ user?.name }}</h5>
-                                        <p class="mb-0">{{ user?.email }}</p>
+                                        <h5 class="mb-1">{{ user.name }}</h5>
+                                        <p class="mb-0">{{ user.email }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -282,12 +292,21 @@ export default {
     name: 'navbar',
     data() {
         return {
-            user: null,
+            user: {
+                name: '',
+                email: '',
+                avatar: '/assets/images/default.png', 
+            },
         };
     },
     computed: {
         isAuthenticated() {
             return this.$store.getters.isAuthenticated;
+        },
+        computedAvatar() {
+            return this.user.avatar && this.user.avatar !== "https://cdlapi.chandalen.dev/storage/avatar/default.png"
+                ? this.user.avatar
+                : '/assets/images/default.png';
         },
     },
     created() {
@@ -303,7 +322,12 @@ export default {
                             Authorization: `Bearer ${token}`,
                         },
                     });
-                    this.user = response.data.data;
+                    const userData = response.data.data;
+                    this.user = {
+                        name: userData.name,
+                        email: userData.email,
+                        avatar: userData.avatar || '/assets/images/default.png',
+                    };
                 } catch (error) {
                     console.error("There was an error fetching the user data:", error);
                 }
@@ -322,8 +346,8 @@ export default {
                     });
                     console.log("Logged out successfully:", response.data);
                     localStorage.removeItem('token');
-                    this.user = null;
-                    window.location.reload();
+                    this.user = { name: '', email: '', avatar: '/assets/images/default.png' };
+                    this.$router.push('/login');
                 } catch (error) {
                     console.error("There was an error logging out:", error);
                 }
@@ -333,6 +357,7 @@ export default {
         },
     },
 };
+
 </script>
 
 <style scoped></style>

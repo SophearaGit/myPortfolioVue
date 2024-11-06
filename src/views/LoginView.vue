@@ -8,7 +8,7 @@
             <div class="card shadow">
               <div class="card-body p-6">
                 <div class="mb-4">
-                  <h1 class="mb-1 fw-bold">Sign in</h1>
+                  <h1 class="mb-1 fw-bold">Log in</h1>
                 </div>
                 <Form @submit="submitForm" :validation-schema="schema">
                   <div class="mb-3">
